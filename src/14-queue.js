@@ -23,7 +23,7 @@ class Queue {
   }
 
   enqueue(element) {
-    const newNode = new ListNode();
+    const newNode = new ListNode(element);
     if (this.length === 0) {
       this.head = newNode;
       this.tail = newNode;
@@ -31,7 +31,7 @@ class Queue {
       this.tail.next = newNode;
       this.tail = newNode;
     }
-    this.tail.value = element;
+
     this.length++;
   }
 
